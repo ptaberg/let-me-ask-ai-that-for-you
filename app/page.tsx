@@ -66,7 +66,7 @@ export default function Home() {
           <div className="px-2 text-[20px] font-semibold">Ask AI</div>
           <div className="flex items-center gap-2">
             <a
-              href="https://github.com/"
+              href="https://github.com/ptaberg/let-me-ask-ai-that-for-you"
               target="_blank"
               rel="noreferrer"
               className="hidden h-9 items-center rounded-full px-4 text-sm font-medium hover:bg-[var(--cg-hover)] sm:flex"
@@ -74,7 +74,7 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/ptashyts/"
               target="_blank"
               rel="noreferrer"
               className="flex h-9 items-center rounded-full bg-[var(--cg-text)] px-4 text-sm font-medium text-[var(--cg-bg)] hover:opacity-90"
