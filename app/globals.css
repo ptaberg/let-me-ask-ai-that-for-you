@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --cg-bg: #ffffff;
+  --cg-text: #0d0d0d;
+  --cg-muted: #5d5d5d;
+  --cg-hover: rgba(13, 13, 13, 0.06);
+  --cg-composer-bg: #ffffff;
+  --cg-composer-border: #e5e5e5;
+  --cg-composer-border-focus: #d0d0d0;
+  --cg-composer-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 9px 9px 0 rgba(0, 0, 0, 0.01),
+    0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  --cg-disabled: #e5e5e5;
+  --cg-disabled-fg: #9b9b9b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --cg-bg: #212121;
+    --cg-text: #ececec;
+    --cg-muted: #b4b4b4;
+    --cg-hover: rgba(255, 255, 255, 0.08);
+    --cg-composer-bg: #303030;
+    --cg-composer-border: #303030;
+    --cg-composer-border-focus: #424242;
+    --cg-composer-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.25),
+      0 9px 9px 0 rgba(0, 0, 0, 0.06),
+      0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    --cg-disabled: #424242;
+    --cg-disabled-fg: #8e8e8e;
   }
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cg-bg);
+  color: var(--cg-text);
+}
+
+body {
+  font-family:
+    "Söhne",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+  font-family: inherit;
 }
